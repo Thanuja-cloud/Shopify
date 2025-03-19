@@ -1,9 +1,10 @@
 package com.tus.shopify;
 
 
-import com.example.userservice.model.User;
-import com.example.userservice.repository.UserRepository;
-import com.example.userservice.service.UserService;
+import com.tus.shopify.controller.UserController;
+import com.tus.shopify.model.User;
+import com.tus.shopify.repository.UserRepository;
+import com.tus.shopify.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

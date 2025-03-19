@@ -1,9 +1,8 @@
 package com.tus.shopify;
 
-
-import com.example.userservice.controller.UserController;
-import com.example.userservice.model.User;
-import com.example.userservice.service.UserService;
+import com.tus.shopify.controller.UserController;
+import com.tus.shopify.model.User;
+import com.tus.shopify.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
