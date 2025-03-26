@@ -1,0 +1,34 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: shopify
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/product_service
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=Thanuja123
+    ports:
+      - "3093:8091"
+    restart: on-failure
+    depends_on:
+      - db
+    networks:
+      - springboot-network
+
+  db:
+    image: mysql:8
+    container_name: mysql_db_new
+    environment:
+      - MYSQL_ROOT_PASSWORD=Thanuja123
+      - MYSQL_DATABASE=product_service
+    restart: always
+    ports:
+      - "3307:3306"  # Host port mapped to container's MySQL port for external access
+    networks:
+      - springboot-network
+
+networks:
+  springboot-network:
+    driver: bridge
