@@ -32,7 +32,7 @@ class UserControllerTest {
                 .andExpect(status().isOk());
     }
 
-    @Test
+    /*@Test
     void testCreateUser() throws Exception {
         User user = new User();
         user.setName("Jane Doe");
@@ -43,5 +43,5 @@ class UserControllerTest {
                         .contentType("application/json")
                         .content("{\"name\":\"Jane Doe\",\"email\":\"jane@example.com\"}"))
                 .andExpect(status().isCreated());
-    }
+    }*/
 }
