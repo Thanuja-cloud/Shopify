@@ -10,7 +10,7 @@ services:
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=Thanuja123
     ports:
-      - "3093:8091"
+      - "3093:8081"
     restart: on-failure
     depends_on:
       - db
