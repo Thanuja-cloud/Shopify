@@ -18,7 +18,7 @@ public class UserController {
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
-
+//this is a create user
     @PostMapping
     public User createUser(@RequestBody User user) {
         return userService.createUser(user);
