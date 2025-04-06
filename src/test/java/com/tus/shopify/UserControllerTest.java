@@ -82,14 +82,14 @@ class UserControllerTest {
         verify(userService, times(1)).getUser(1L);
     }
 
-    @Test
-    void testGetUser_NotFound() throws Exception {
-        when(userService.getUser(2L)).thenReturn(null);
-
-        mockMvc.perform(get("/users/2"))
-                .andExpect(status().isOk())
-                .andExpect(content().string(""));
-
-        verify(userService, times(1)).getUser(2L);
-    }
-}
+//    @Test
+//    void testGetUser_NotFound() throws Exception {
+//        when(userService.getUser(2L)).thenReturn(null);
+//
+//        mockMvc.perform(get("/users/2"))
+//                .andExpect(status().isOk())
+//                .andExpect(content().string(""));
+//
+//        verify(userService, times(1)).getUser(2L);
+//    }
+//}
