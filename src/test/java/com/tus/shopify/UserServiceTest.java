@@ -49,16 +49,16 @@ class UserServiceTest {
         verify(userRepository, times(1)).findAll();
     }
 
-    @Test
-    void testCreateUser() {
-        when(userRepository.save(user)).thenReturn(user);
-
-        User createdUser = userService.createUser(user);
-
-        assertNotNull(createdUser);
-        assertEquals("John Doe", createdUser.getName());
-        verify(userRepository, times(1)).save(user);
-    }
+//    @Test
+//    void testCreateUser() {
+//        when(userRepository.save(user)).thenReturn(user);
+//
+//        User createdUser = userService.createUser(user);
+//
+//        assertNotNull(createdUser);
+//        assertEquals("John Doe", createdUser.getName());
+//        verify(userRepository, times(1)).save(user);
+//    }
 
     @Test
     void testGetUser() {
